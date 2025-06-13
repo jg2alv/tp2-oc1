@@ -17,6 +17,7 @@ module execute (
   always @(*) begin
     case (aluop)
       2'b00: res = in1 + srcb; // load/store
+      2'b01: res = in1 - srcb; // branch
       2'b10: begin             // tipo R
         case (funct)
           10'b0000000000: res = in1 + srcb; // add
