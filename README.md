@@ -15,14 +15,6 @@ The repository separates an educational 32-bit RISC-V datapath into instruction 
 
 The assignment uses a course-provided Google Colab notebook to integrate the Verilog modules, load machine code, and visualize processor state. This archive preserves the component files rather than that notebook environment.
 
-<!--
-## How to run
--->
-
-<!--
-## Usage example
--->
-
 ## 2. Implementation decisions
 
 `decode.v` extracts the opcode, source and destination register indices, and function fields. Its control unit recognizes the register-register opcode, enables register writeback, and selects the ALU control class used for those instructions. The register bank supplies the operands through the decode interface.
@@ -37,7 +29,6 @@ The assignment's testing workflow uses Venus to assemble instruction-level tests
 
 The archive contains no assembly test program or notebook output accompanying that workflow.
 
-
 ## 4. Learning and limitations
 
 Following the same instruction across the decode and execute interfaces strengthened my understanding of hardware description languages, instruction encoding, and the relationship between control and datapath behavior. The exercise made a small arithmetic instruction concrete as a coordinated sequence of field extraction, operand routing, control selection, and result generation.
@@ -48,5 +39,4 @@ The archived repository does not include the integration notebook, a separate to
 
 Developed as a team project, extending Verilog modules supplied for the course.
 
-**My contribution:** implemented ADD by modifying `decode.v` and `execute.v`, connecting register-based decoding, operand selection, ALU control, and the addition result.
-
+**My contribution:** I implemented ADD by modifying `decode.v` and `execute.v`, connecting register-based decoding, operand selection, ALU control, and the addition result.
